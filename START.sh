@@ -6,15 +6,18 @@ error() {
 }
 
 backup=$1
-if [ -f "$backup" ]
+if [ -n "$backup" ]
 then
-  rm -rf world/
-  if ! tar -xzf "$backup";
+  if [ -f "$backup" ]
   then
-    error "Could not extract \"$backup\"!"
+    rm -rf world/
+    if ! tar -xzf "$backup";
+    then
+      error "Could not extract \"$backup\"!"
+    fi
+  else
+    error "File \"$backup\" not found!"
   fi
-else
-  error "File \"$backup\" not found!"
 fi
 
 # TODO: check java version and set it
