@@ -1,9 +1,7 @@
 # IDE
 .idea/
 
-world/
-logs/
-banned-ips.json
-banned-players.json
-usercache.json
-whitelist.json
+# Minecraft
+server/
+# Python
+venv/
