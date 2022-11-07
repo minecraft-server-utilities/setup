@@ -9,3 +9,10 @@ Prune all unnecessary chunks using [mcaselector](https://github.com/Querz/mcasel
 
 ## server
 run **SETUP.sh** with game version and optionally a backup
+
+use **screen** to manage running servers:
+```shell
+screen -S server  # create a named session
+Ctrl-a + d  # leave a session
+screen -r server  # reconnect to the named session
+```
